@@ -1,0 +1,1 @@
+<h1>FTC RECON DASHBOARD <?php echo $content;?></h1>

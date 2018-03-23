@@ -19,10 +19,11 @@ class Fileutility {
         }
     }
 
-    public function readFile($filename, $atcualname = NULL) {
+    public function readFile($filename, $actualname = NULL) {
+
         switch ($this->filetype) {
             case "excel": {
-                    $excelData = $this->readExcel($filename, $atcualname);
+                    $excelData = $this->readExcel($filename, $actualname);
                     return $excelData;
                     break;
                 }
@@ -53,6 +54,8 @@ class Fileutility {
             $reader = new \PhpOffice\PhpSpreadsheet\Reader\Xls();
         } else if ($this->extension == 'xlsx') {
             $reader = new \PhpOffice\PhpSpreadsheet\Reader\Xlsx();
+        } else if ($this->extension == 'csv') {
+            $reader = new \PhpOffice\PhpSpreadsheet\Reader\Csv();
         } else {
             throw new Exception("Unkown excel extension", 500);
         }
