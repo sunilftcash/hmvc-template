@@ -15,7 +15,7 @@ class Jiomoney_model extends CI_Model {
 
     public function process($pg_recon_data) {
         
-    	echo "Processing Jiomoney Recon Sheet <br/>";
+    	echo "Processing PG:Jiomoney Recon Sheet <br/>";
     	echo "<pre>";
         print_r($pg_recon_data);
     }

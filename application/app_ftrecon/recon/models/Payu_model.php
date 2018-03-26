@@ -15,9 +15,12 @@ class Payu_model extends CI_Model {
 
     public function process($pg_recon_data) {
 
-        echo "Processing Payu Recon Sheet <br/>";
+        echo "Processing PG:Payu Recon Sheet <br/>";
         echo "<pre>";
         print_r($pg_recon_data);
+        //get MySQL txn dump from Transaction ID
+
+        //get mapMatrixStatus from eStatus and Status
     }
 
 }

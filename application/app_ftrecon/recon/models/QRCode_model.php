@@ -15,7 +15,7 @@ class QRCode_model extends CI_Model {
 
     public function process($pg_recon_data) {
         
-    	echo "Processing QRCode Recon Sheet <br/>";
+    	echo "Processing PG:QRCode Recon Sheet <br/>";
     	echo "<pre>";
         print_r($pg_recon_data);
     }

@@ -15,9 +15,12 @@ class Olamoney_model extends CI_Model {
 
     public function process($pg_recon_data) {
         
-    	echo "Processing Olamoney Recon Sheet <br/>";
+    	echo "Processing PG:Olamoney Recon Sheet <br/>";
     	echo "<pre>";
         print_r($pg_recon_data);
+        //get MySQL txn dump from Merchant Transaction Id
+
+        //get mapMatrixStatus from eStatus and status
     }
 
 }
