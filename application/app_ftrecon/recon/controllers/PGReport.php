@@ -54,10 +54,6 @@ class PGReport extends MX_Controller {
                 }
 
                 switch ($pg) {
-                    case 'payu':
-                        $this->load->model('Payu_model', 'payu_model');
-                        $this->payu_model->process($pg_recon_data);
-                        break;
                     case 'atom':
                         $this->load->model('Atom_model', 'atom_model');
                         $this->atom_model->process($pg_recon_data);
@@ -66,17 +62,25 @@ class PGReport extends MX_Controller {
                         $this->load->model('Billdesk_model', 'billdesk_model');
                         $this->billdesk_model->process($pg_recon_data);
                         break;
+                    case 'freecharge':
+                        $this->load->model('Freecharge_model', 'freecharge_model');
+                        $this->freecharge_model->process($pg_recon_data);
+                        break;
                     case 'icici':
                         $this->load->model('ICICINB_model', 'icicinb_model');
                         $this->icicinb_model->process($pg_recon_data);
                         break;
+                    case 'ola':
+                        $this->load->model('Olamoney_model', 'olamoney_model');
+                        $this->olamoney_model->process($pg_recon_data);
+                        break;
+                    case 'payu':
+                        $this->load->model('Payu_model', 'payu_model');
+                        $this->payu_model->process($pg_recon_data);
+                        break;
                     case 'jio':
                         $this->load->model('Jiomoney_model', 'jiomoney_model');
                         $this->jiomoney_model->process($pg_recon_data);
-                        break;
-                    case 'freecharge':
-                        $this->load->model('Freecharge_model', 'freecharge_model');
-                        $this->freecharge_model->process($pg_recon_data);
                         break;
                     case 'upi':
                         $this->load->model('UPI_model', 'upi_model');
@@ -86,10 +90,7 @@ class PGReport extends MX_Controller {
                         $this->load->model('QRCode_model', 'qrcode_model');
                         $this->qrcode_model->process($pg_recon_data);
                         break;
-                    case 'ola':
-                        $this->load->model('Olamoney_model', 'olamoney_model');
-                        $this->olamoney_model->process($pg_recon_data);
-                        break;
+                    
                 }
             }
         }

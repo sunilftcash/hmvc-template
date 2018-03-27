@@ -73,6 +73,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $active_group = 'default';
 $query_builder = TRUE;
 
+// Production DB Connection
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'ftcash.cvbp7ygqwqgp.ap-southeast-1.rds.amazonaws.com',//'localhost',
@@ -94,3 +95,26 @@ $db['default'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );
+
+// UAT DB Connection
+/*$db['default'] = array(
+	'dsn'	=> '',
+	'hostname' => 'ftcash.cvbp7ygqwqgp.ap-southeast-1.rds.amazonaws.com',//'localhost',
+	'username' => 'tester',
+	'password' => 'tester@13122017',
+	'database' => 'ftcash',
+	'dbdriver' => 'mysqli',
+	'dbprefix' => '',
+	'pconnect' => FALSE,
+	'db_debug' => (ENVIRONMENT !== 'production'),
+	'cache_on' => FALSE,
+	'cachedir' => '',
+	'char_set' => 'utf8mb4',
+	'dbcollat' => 'utf8mb4_unicode_ci',
+	'swap_pre' => '',
+	'encrypt' => FALSE,
+	'compress' => FALSE,
+	'stricton' => FALSE,
+	'failover' => array(),
+	'save_queries' => TRUE
+);*/
